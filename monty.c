@@ -7,6 +7,7 @@ op_env_t op_env = {NULL, NULL, NULL, 0, 1, LIFO};
  * @argc: argument count
  * @argv: argument values
  *
+ * Team task, Martin and samuel
  * Return: Upon success, return EXIT_SUCCESS.
  */
 int main(int argc, char **argv)
