@@ -1,5 +1,7 @@
 #include "monty.h"
 
+op_env_t op_env = {NULL, NULL, NULL, 0, 1, LIFO};
+
 /**
  * main - entry point
  * @argc: argument count
@@ -10,7 +12,6 @@
  */
 int main(int argc, char **argv)
 {
-	op_env_t op_env = {NULL, NULL, NULL, 0, 1, LIFO};
 
 	ssize_t n_read = 0;
 
