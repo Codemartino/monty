@@ -1,20 +1,28 @@
 #include "monty.h"
-
 /**
- * op_add - Add the top two elements on the stack
- * @sp: Stack pointer
- * This add two elements at the top of the stack
- */
-void op_add(stack_t **sp)
+ * f_add - adds the top two elements of the stack.
+ * @head: stack head
+ * Return: no return
+*/
+void f_add(stack_t **head)
 {
-	int to_add = 0;
+	stack_t *h;
+	int len = 0, op_add;
 
-	if (!(*sp && *sp != (*sp)->next))
-		pfailure("L%u: can't add, stack too short\n", op_env.lineno);
+	h = *head;
+	len = op_len(h);
 
-	to_add = (*sp)->n;
-
-	op_pop(sp);
-
-	(*sp)->n += to_add;
+	if (len < 2)
+	{
+		fprintf(stderr, "L%d: can't add, stack too short\n", op_env.lineno);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
+		exit(EXIT_FAILURE);
+	}
+	h = *head;
+	op_add = h->n + h->next->n;
+	h->next->n = op_add;
+	*head = h->next;
+	free(h);
 }

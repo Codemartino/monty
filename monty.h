@@ -1,16 +1,16 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-#define _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
  * struct stack_s - Doubly linked list representation of a stack (or queue)
  * @n: integer
- * @prev: Points to the previous element of the stack (or queue)
- * @next: Points to the next element of the stack (or queue)
+ * @prev: points to the previous element of the stack (or queue)
+ * @next: points to the next element of the stack (or queue)
  *
+ * Team task for Martin and Samuel
  * Description: Doubly linked list node structure
  * for stack, queues, LIFO, FIFO Holberton project
  */
@@ -27,7 +27,7 @@ typedef void (*instruction_fn)(stack_t **);
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
  * @fn: function to handle the opcode
- * Martin ft Samuel
+ *
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO Holberton project
  */
@@ -88,6 +88,7 @@ void op_rotr(stack_t **sp);
 void op_stack(stack_t **sp);
 void op_sub(stack_t **sp);
 void op_swap(stack_t **sp);
+int op_len(stack *h);
 
 char **tokenize(char *str);
 size_t count_tokens(const char *str);
