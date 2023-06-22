@@ -88,7 +88,6 @@ void op_rotr(stack_t **sp);
 void op_stack(stack_t **sp);
 void op_sub(stack_t **sp);
 void op_swap(stack_t **sp);
-int op_len(stack *h);
 
 char **tokenize(char *str);
 size_t count_tokens(const char *str);
