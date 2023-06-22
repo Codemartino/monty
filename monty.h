@@ -6,13 +6,12 @@
 #include <stdlib.h>
 
 /**
- * struct stack_s - Doubly linked list representation of a stack (or queue)
+ * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
- *
  * Team task for Martin and Samuel
- * Description: Doubly linked list node structure
+ * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO Holberton project
  */
 typedef struct stack_s
@@ -89,7 +88,6 @@ void op_rotr(stack_t **sp);
 void op_stack(stack_t **sp);
 void op_sub(stack_t **sp);
 void op_swap(stack_t **sp);
-int op_len(stack *h);
 
 char **tokenize(char *str);
 size_t count_tokens(const char *str);
